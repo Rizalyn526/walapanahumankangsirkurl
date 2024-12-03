@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="mt.svg" type="image/svg+xml" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .nav-link {
+            font-weight: bold;
+            color: #333;
+        }
+    
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-view-project {
+            background-color: #ff4500;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-view-project:hover {
+            background-color: #e63946;
+        }
+
+        .carousel-inner {
+            display: flex;
+            overflow-x: auto;
+            padding: 20px 0;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            margin-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-inner {
+                flex-direction: column;
+            }
+
+            .carousel-item {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="https://media2.giphy.com/media/0nP16ic39KAFQNI3ew/200.gif" alt="Logo" class="rounded-circle" style="height: 40px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">MY PROJECTS</h2>
+
+        <!-- Carousel for projects -->
+        <div id="projectCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Project Card 1 -->
+                <div class="carousel-item active">
+                    <div class="project-card">
+                        <img src="Picture1.png" alt="Weather Website">
+                        <div class="project-overlay">
+                            <div>
+                                <h3 class="project-title">Weather Website</h3>
+                                <p class="project-description">This is a short description of Project 1.</p>
+                                <a href="https://rizalyn526.github.io/Riza/" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="carousel-item">
+                    <div class="project-card">
+                        <img src="picture2.png" alt="E-commerce">
+                        <div class="project-overlay">
+                            <div>
+                                <h3 class="project-title">E-commerce Website</h3>
+                                <p class="project-description">This is a short description of Project 2.</p>
+                                <a href="https://rizalyn526.github.io/unyanani/" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="carousel-item">
+                    <div class="project-card">
+                        <img src="Picture3.png" alt="Project 3">
+                        <div class="project-overlay">
+                            <div>
+                                <h3 class="project-title">Personal Portfolio</h3>
+                                <p class="project-description">This is a short description of Project 3.</p>
+                                <a href="project-detail3.html" class="btn-view-project">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
